@@ -1,21 +1,24 @@
+<?php
+require_once 'Controllers/controlador_productos.php';
+?>
 <h1 class="page-header">Prueba KCRM</h1>
  
  
-    <a class="btn btn-primary pull-right" href="?c=cliente&a=Crud">Agregar</a>
+    <a class="btn btn-primary pull-right" href="?p=producto&a=Crud">Agregar</a>
 <br><br><br>
  
 <table class="table  table-striped  table-hover" id="tabla">
     <thead>
         <tr>
         <th style="width:120px;background-color: #5DACCD; color:#fff">Id</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Nombre</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Referencia</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Precio</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Peso</th>            
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Categoria</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Stock</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Fecha Creacion</th>
-            <th style="width:120px; background-color: #5DACCD; color:#fff">Fecha Ultima Venta</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Nombre</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Referencia</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Precio</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Peso</th>            
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Categoria</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Stock</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Fecha Creacion</th>
+            <th style="width:80px; background-color: #5DACCD; color:#fff">Fecha Ultima Venta</th>
         </tr>
     </thead>
     <tbody>
@@ -31,10 +34,10 @@
             <td><?php echo $p->fechacreacion; ?></td>
             <td><?php echo $p->fechaultimaventa; ?></td>
             <td>
-                <a  class="btn btn-warning" href="?c=cliente&a=Crud&id=<?php echo $p->id; ?>">Editar</a>
+                <a  class="btn btn-warning" href="?p=producto&a=Crud&id=<?php echo $p->id; ?>">Editar</a>
             </td>
             <td>
-                <a  class="btn btn-danger" onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=cliente&a=Eliminar&id=<?php echo $p->id; ?>">Eliminar</a>
+                <a  class="btn btn-danger" onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?p=producto&a=Eliminar&id=<?php echo $p->id; ?>">Eliminar</a>
             </td>
         </tr>
     <?php endforeach; ?>

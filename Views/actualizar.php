@@ -1,5 +1,5 @@
 <h1 class="page-header">
-    <?php echo $producto->id != null ? $producto->Nombre : 'Nuevo Registro'; ?>
+    <?php echo $producto->id != null ? $producto->nombre : 'Nuevo Registro'; ?>
 </h1>
  
 <ol class="breadcrumb">
@@ -38,7 +38,11 @@
     </div>
     <div class="form-group">
         <label>Fecha Creacion</label>
-        <input type="text" name="fechacreacion" value="<?php echo $producto->fechacreacion; ?>" class="form-control" placeholder="Ingrese  fecha creacion" required>
+        <input type="text" name="fechacreacion" value="<?php echo $producto->fechacreacion; ?>" class="form-control" placeholder="Ingrese fecha creacion" required>
+    </div>
+    <div class="form-group">
+        <label>Fecha Ultima Venta</label>
+        <input type="text" name="fechaultimaventa" value="<?php echo $producto->fechaultimaventa; ?>" class="form-control" placeholder="Ingrese fecha ultima venta" required>
     </div>
     <hr />
     

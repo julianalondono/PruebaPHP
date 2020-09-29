@@ -31,11 +31,12 @@ class Producto
 	{
 		try
 		{
+			
 			$result = array();
 			$stm = $this->db->prepare("SELECT * FROM producto");
 			$stm->execute();
- 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
+		
 		}
 		catch(Exception $e)
 		{
@@ -104,7 +105,7 @@ class Producto
 		}
 	}
  
-	public function Registrar(cliente $data)
+	public function Registrar(producto $data)
 	{
 		try 
 		{

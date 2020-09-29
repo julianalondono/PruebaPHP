@@ -8,7 +8,6 @@
         
         <link rel="stylesheet" href="css/style.css" />
         <link href="plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-        
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
          <script src="plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
     <script src="plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>

@@ -16,9 +16,8 @@ class ControladorProducto{
     
     public function Crud(){
         $producto = new Producto();
-        
         if(isset($_REQUEST['id'])){
-            $producto = $this->model->Obtener($_REQUEST['id']);
+            $producto = $this->modelo->Obtener($_REQUEST['id']);
         }
         
         require_once 'Views/header.php';
@@ -37,15 +36,13 @@ class ControladorProducto{
         $producto->fechacreacion = $_REQUEST['fechacreacion'];   
         $producto->fechaultimaventa = $_REQUEST['fechaultimaventa'];  
 
-        $cliente->id > 0 
-            ? $this->model->Actualizar($producto)
-            : $this->model->Registrar($producto);
+        $producto->id > 0 ? $this->modelo->Actualizar($producto): $this->modelo->Registrar($producto);
         
         header('Location: index.php');
     }
     
     public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['id']);
+        $this->modelo->Eliminar($_REQUEST['id']);
         header('Location: index.php');
     }
 }
