@@ -104,6 +104,23 @@ class Producto
 			die($e->getMessage());
 		}
 	}
+
+	public function Vender($id)
+	{
+		try 
+		{
+			$sql = "UPDATE producto SET Stock  = 'Stock-1',	WHERE id = ?";
+ 
+			$this->db->prepare($sql)
+			     ->execute(
+				    array($id)
+				);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+ 
  
 	public function Registrar(producto $data)
 	{
