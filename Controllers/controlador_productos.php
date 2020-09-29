@@ -43,6 +43,6 @@ class ControladorProducto{
     
     public function Eliminar(){
         $this->modelo->Eliminar($_REQUEST['id']);
-        header('Location: index.php');
+        header('Location: /Views/productos.php');
     }
 }

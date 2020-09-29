@@ -2,11 +2,7 @@
     <?php echo $producto->id != null ? $producto->nombre : 'Nuevo Registro'; ?>
 </h1>
  
-<ol class="breadcrumb">
-  <li><a href="?p=producto">Producto</a></li>
-  <li class="active"><?php echo $producto->id != null ? $producto->Nombre : 'Nuevo Registro'; ?></li>
-</ol>
- 
+
 <form id="frm-producto" action="?p=producto&a=Guardar" method="post">
 
       <div class="form-group">
